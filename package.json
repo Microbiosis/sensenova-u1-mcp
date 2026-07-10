@@ -1,6 +1,6 @@
 {
   "name": "sensenova-u1-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SenseNova U1 Fast MCP Server",
   "main": "index.js",
   "type": "module",

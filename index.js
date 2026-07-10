@@ -13,14 +13,10 @@ const VALID_SIZES = new Set([
   "1536x2752", "3072x1376", "1344x3136"
 ]);
 
-const API_KEY = process.env.SENSENOVA_API_KEY;
-if (!API_KEY) {
-  console.error("Error: SENSENOVA_API_KEY environment variable is required");
-  process.exit(1);
-}
+// 不再在启动时检查 Key，改为调用时检查
 
 const server = new Server(
-  { name: "sensenova-u1-fast", version: "1.0.0" },
+  { name: "sensenova-u1-fast", version: "1.0.1" },
   { capabilities: { tools: {} } }
 );
 
@@ -59,6 +55,15 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   if (name !== "generate_image") {
     return {
       content: [{ type: "text", text: `Unknown tool: ${name}` }],
+      isError: true
+    };
+  }
+
+  // 调用时才检查 Key
+  const API_KEY = process.env.SENSENOVA_API_KEY;
+  if (!API_KEY) {
+    return {
+      content: [{ type: "text", text: "[ERROR] 环境变量 SENSENOVA_API_KEY 未设置。请在 MCP 配置中添加该环境变量。" }],
       isError: true
     };
   }
