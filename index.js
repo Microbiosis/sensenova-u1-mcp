@@ -24,7 +24,7 @@ const API_BASE = "https://token.sensenova.cn/v1/images/generations";
 /** 服务元信息 */
 const SERVER_INFO = {
   name: "sensenova-u1-fast",
-  version: "1.0.3",
+  version: "1.0.4",
 };
 
 /** 支持的 11 种分辨率集合 */

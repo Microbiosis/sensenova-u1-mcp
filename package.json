@@ -1,6 +1,6 @@
 {
   "name": "sensenova-u1-mcp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "SenseNova U1 Fast MCP Server — 商汤科技文生图 API 的 MCP 服务",
   "type": "module",
   "main": "index.js",

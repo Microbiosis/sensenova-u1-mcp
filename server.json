@@ -3,12 +3,12 @@
   "name": "io.github.Microbiosis/sensenova-u1-mcp",
   "title": "SenseNova U1 Fast Image Generator",
   "description": "SenseNova U1 Fast MCP Server for AI image generation via 商汤科技 SenseNova API",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "packages": [
     {
       "registry_type": "npm",
       "identifier": "sensenova-u1-mcp",
-      "version": "1.0.3"
+      "version": "1.0.4"
     }
   ]
 }
