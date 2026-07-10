@@ -1,0 +1,33 @@
+{
+  "name": "sensenova-u1-mcp",
+  "version": "1.0.0",
+  "description": "SenseNova U1 Fast MCP Server",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "sensenova-u1-mcp": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "sensenova",
+    "image-generation",
+    "u1-fast",
+    "modelcontextprotocol"
+  ],
+  "author": "redmingwei",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  }
+}
