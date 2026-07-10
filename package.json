@@ -1,31 +1,53 @@
 {
   "name": "sensenova-u1-mcp",
-  "version": "1.0.1",
-  "description": "SenseNova U1 Fast MCP Server",
-  "main": "index.js",
+  "version": "1.0.3",
+  "description": "SenseNova U1 Fast MCP Server — 商汤科技文生图 API 的 MCP 服务",
   "type": "module",
+  "main": "index.js",
   "bin": {
     "sensenova-u1-mcp": "./index.js"
   },
   "files": [
     "index.js",
     "package.json",
-    "README.md"
+    "README.md",
+    "LICENSE",
+    "server.json"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "prepublishOnly": "node -e \"require('fs').existsSync('index.js') || process.exit(1)\"",
+    "test": "node --experimental-vm-modules test.js",
+    "version": "git add -A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Microbiosis/sensenova-u1-mcp.git"
+  },
+  "homepage": "https://github.com/Microbiosis/sensenova-u1-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/Microbiosis/sensenova-u1-mcp/issues"
   },
   "keywords": [
     "mcp",
+    "mcp-server",
+    "modelcontextprotocol",
     "sensenova",
-    "image-generation",
     "u1-fast",
-    "modelcontextprotocol"
+    "商汤",
+    "image-generation",
+    "ai-image",
+    "文生图",
+    "图像生成"
   ],
+  "mcpName": "io.github.Microbiosis/sensenova-u1-mcp",
   "author": "redmingwei",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0"

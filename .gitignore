@@ -1,23 +1,34 @@
+# === Node.js ===
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnp
+.pnp.js
 
-# Environment variables
+# === 环境变量 ===
 .env
 .env.local
 .env.*.local
 
-# OS files
+# === 操作系统 ===
 .DS_Store
 Thumbs.db
-
-# IDE
-.idea/
-.vscode/
 *.swp
 *.swo
 *~
 
-# Coverage
+# === IDE ===
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# === 测试覆盖率 ===
 coverage/
+
+# === 构建输出 ===
+dist/
+build/
